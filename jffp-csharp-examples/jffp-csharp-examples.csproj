@@ -42,7 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Example-1\Example1.cs" />
+    <Compile Include="Example-1\ThreeAwait.cs" />
+    <Compile Include="Example-1\OneWhenAll.cs" />
     <Compile Include="Helpers\TimeHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

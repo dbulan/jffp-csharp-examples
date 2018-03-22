@@ -10,13 +10,15 @@ namespace jffp_csharp_examples
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             var timeStart = DateTime.Now;
             Console.WriteLine("MainStart");
 
-            // example-1
-            Example1.Do();
+            // EXAMPLE-1
+            //ThreeAwait.Do(timeStart);
+            //OneWhenAll.Do(timeStart);
 
             var timeEnd = DateTime.Now;
             Console.WriteLine("MainEnd {0}", TimeHelper.DisplayElapsedTime(timeStart, timeEnd));
