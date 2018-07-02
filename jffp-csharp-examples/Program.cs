@@ -1,4 +1,4 @@
-﻿using jffp_csharp_examples.Example_1;
+﻿using jffp_csharp_examples.Example_001;
 using jffp_csharp_examples.Helpers;
 using System;
 using System.Collections.Generic;
@@ -16,9 +16,9 @@ namespace jffp_csharp_examples
             var timeStart = DateTime.Now;
             Console.WriteLine("MainStart");
 
-            // EXAMPLE-1
-            //ThreeAwait.Do(timeStart);
-            //OneWhenAll.Do(timeStart);
+            // EXAMPLE-001
+            ThreeAwait.Do(timeStart);
+            OneWhenAll.Do(timeStart);
 
             var timeEnd = DateTime.Now;
             Console.WriteLine("MainEnd {0}", TimeHelper.DisplayElapsedTime(timeStart, timeEnd));

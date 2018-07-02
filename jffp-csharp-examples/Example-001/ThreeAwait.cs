@@ -4,27 +4,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
-namespace jffp_csharp_examples.Example_1
+namespace jffp_csharp_examples.Example_001
 {
     /*
         ThreeAwait result is ~9 seconds
         OneWhenAll result is ~3 seconds
     */
 
-    public static class OneWhenAll
+    public static class ThreeAwait
     {
         private static string SITE_PATH = "http://localhost/jffp/jffp-phpjs-examples/example-1/?siteId=";
 
         public async static void Do(DateTime timeStart)
         {
-            var site2 = GetSite(String.Format("{0}{1}", SITE_PATH, 2));
-            var site3 = GetSite(String.Format("{0}{1}", SITE_PATH, 3));
-            var site4 = GetSite(String.Format("{0}{1}", SITE_PATH, 4));
+            var site2 = await GetSite(String.Format("{0}{1}", SITE_PATH, 2));
+            var site3 = await GetSite(String.Format("{0}{1}", SITE_PATH, 3));
+            var site4 = await GetSite(String.Format("{0}{1}", SITE_PATH, 4));
 
-            await Task.WhenAll(site2, site3, site4);
-            var sum = int.Parse(site2.Result) + int.Parse(site3.Result) + int.Parse(site4.Result);
+            var sum = int.Parse(site2) + int.Parse(site3) + int.Parse(site4);
 
             Console.WriteLine("Sum: {0}", sum);
 
