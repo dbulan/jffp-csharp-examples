@@ -45,6 +45,7 @@
     <Compile Include="Example-001\ThreeAwait.cs" />
     <Compile Include="Example-001\OneWhenAll.cs" />
     <Compile Include="Example-002\Example002.cs" />
+    <Compile Include="Example-003\Example003.cs" />
     <Compile Include="Helpers\TimeHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
